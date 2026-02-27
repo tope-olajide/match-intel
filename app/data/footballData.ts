@@ -16,9 +16,9 @@ export const footballData: Record<string, League[]> = {
       code: "E0",
       teams: [
         "Arsenal", "Aston Villa", "Bournemouth", "Brentford", "Brighton",
-        "Chelsea", "Crystal Palace", "Everton", "Fulham", "Ipswich Town",
+        "Chelsea", "Crystal Palace", "Everton", "Fulham",
         "Leicester City", "Liverpool", "Manchester City", "Manchester United",
-        "Newcastle United", "Nottingham Forest", "Southampton", "Tottenham Hotspur",
+        "Newcastle United", "Nottingham Forest", "Southampton","Sunderland", "Tottenham Hotspur",
         "West Ham United", "Wolves"
       ].sort()
     },
