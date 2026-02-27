@@ -15,6 +15,7 @@ export async function POST(request: Request) {
         // Specifying "prioritize core tools" prevents it from looping too many times.
         const prompt = `Act as an Elite Sports Intelligence Engine. 
         Perform a focused pre-match analysis for ${homeTeam} vs ${awayTeam} in the ${league}. 
+        Note: The league is provided as "Code (League Name)". Always use the full human-readable league name in your output, not just the code.
         Use your best tools for form and xG. Output strictly in Markdown.`;
 
         const agentRes = await fetch(agentUrl, {

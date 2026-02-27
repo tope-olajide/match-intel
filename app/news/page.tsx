@@ -65,12 +65,15 @@ export default function NewsPage() {
         setIsNewsLoading(true);
         setMatchNews("");
 
+        const leagueName = currentLeague?.name || selectedLeague;
+        const leagueWithContext = `${selectedLeague} (${leagueName})`;
+
         try {
             const response = await fetch("/api/news", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    league: selectedLeague,
+                    league: leagueWithContext,
                     homeTeam: selectedHomeTeam,
                     awayTeam: selectedAwayTeam,
                 }),

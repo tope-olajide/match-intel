@@ -16,6 +16,7 @@ export async function POST(request: Request) {
 
         const prompt = `Act as an Elite Sports Intelligence Data Analyst.
         Generate an advanced statistical prediction and betting insights table for ${homeTeam} vs ${awayTeam} in the ${league}.
+        Note: The league is provided as "Code (League Name)". Always use the full human-readable league name in your output, not just the code.
         Show ONLY the most important stats. Do not hallucinate data; use your best forms, xG, and tools.
         
         Must include the following categories in Markdown tables:

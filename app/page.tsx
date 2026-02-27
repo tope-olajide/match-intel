@@ -76,6 +76,9 @@ export default function Home() {
     setIsReviewLoading(true);
     setMatchReview("");
 
+    const leagueName = currentLeague?.name || selectedLeague;
+    const leagueWithContext = `${selectedLeague} (${leagueName})`;
+
     try {
       const response = await fetch("/api/match-review", {
         method: "POST",
@@ -83,7 +86,7 @@ export default function Home() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          league: selectedLeague,
+          league: leagueWithContext,
           homeTeam: selectedHomeTeam,
           awayTeam: selectedAwayTeam,
         }),

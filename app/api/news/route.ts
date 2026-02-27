@@ -16,6 +16,7 @@ export async function POST(request: Request) {
 
         const prompt = `Act as an Elite Sports Journalist.
         Generate a compelling, news-style match preview article for ${homeTeam} vs ${awayTeam} in the ${league}.
+        Note: The league is provided as "Code (League Name)". Always use the full human-readable league name in your output, not just the code.
         The tone should be professional, engaging, and neutral. Do not provide betting advice or state predictions as certainties.
         
         Focus on:
