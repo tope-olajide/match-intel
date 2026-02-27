@@ -1,0 +1,9 @@
+
+{
+  "crons": [
+    {
+      "path": "/api/update-leagues",
+      "schedule": "0 0 * * *"
+    }
+  ]
+}
