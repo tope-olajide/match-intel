@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     try {
         const { league, homeTeam, awayTeam } = await request.json();
 
-        const KIBANA_URL = 'https://football-match-intel-ad040f.kb.europe-west2.gcp.elastic.cloud';
+        const KIBANA_URL = process.env.ES_KIBANA_ENDPOINT;
         const agentUrl = `${KIBANA_URL}/api/agent_builder/converse`;
 
         // 🟢 OPTIMIZED PROMPT: This tells the agent to be efficient.

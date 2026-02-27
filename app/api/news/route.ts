@@ -11,7 +11,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
-        const KIBANA_URL = 'https://football-match-intel-ad040f.kb.europe-west2.gcp.elastic.cloud';
+        const KIBANA_URL = process.env.ES_KIBANA_ENDPOINT;
         const agentUrl = `${KIBANA_URL}/api/agent_builder/converse`;
 
         const prompt = `Act as an Elite Sports Journalist.
